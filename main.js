@@ -7,7 +7,7 @@ console.log(getAllElements)
 var getSingleElement = document.getElementsByTagName('ul')[0];
 console.log(getSingleElement)
 
-allListItems = document.getElementsByTagName('li');
+var allListItems = document.getElementsByTagName('li');
 console.log(allListItems);
 
 for (var i = 0; i < allListItems.length; i++) {
@@ -34,3 +34,34 @@ console.log(firstOddElement);
 
 var oddAndEvenElements = document.querySelectorAll('.odd, .even');
 console.log(oddAndEvenElements);
+
+for (var i = 0; i < allListItems.length; i++) {
+  console.log(allListItems[i].innerText = i);
+}
+console.log(allListItems);
+
+document.getElementById('main').style.backgroundColor = "goldenrod";
+
+var li = document.createElement('li');
+console.log(li);
+
+var newElement = li.innerText = "another list item";
+console.log(newElement);
+console.log(li);
+
+getSingleElement.appendChild(li);
+console.log(allListItems);
+
+var anotherListElement = document.createElement('li');
+anotherListElement.innerText = "prepend";
+console.log(anotherListElement);
+getSingleElement.insertBefore(anotherListElement, getSingleElement.firstChild);
+console.log(allListItems);
+
+var yetAnotherListElement = document.createElement('li');
+yetAnotherListElement.innerText = "prependFirst";
+console.log(yetAnotherListElement);
+getSingleElement.insertBefore(yetAnotherListElement, getSingleElement.firstChild);
+console.log(allListItems);
+
+firstEvenElement.parentNode.removeChild(firstEvenElement);
